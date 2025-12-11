@@ -1,13 +1,15 @@
 import numpy as np
 import pandas as pd
 import pytest
+from pathlib import Path
+
 
 # Using the explicit direct import to resolve the registry loading issue:
 import a4s_eval.metrics.textgen_metrics.char_level_perturbation_rate_metric 
 
 
 DATE_FEATURE = "issue_d"
-N_SAMPLES: int | None = 100
+N_SAMPLES: int | None = 10000
 
 
 def sample(df: pd.DataFrame) -> pd.DataFrame:
